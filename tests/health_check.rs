@@ -1,5 +1,5 @@
-use std::net::TcpListener;
 use sqlx::{Connection, Executor, PgConnection, PgPool};
+use std::net::TcpListener;
 use uuid::Uuid;
 use zero2prod::configuration::{DatabaseSettings, get_configuration};
 
