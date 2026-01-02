@@ -36,7 +36,7 @@ impl EmailClient {
         let request_body = SendEmailRequest {
             from: self.sender.as_ref(),
             to: recipient.as_ref(),
-            subject: subject,
+            subject,
             html_body: html_content,
             text_body: text_content,
         };
@@ -112,7 +112,7 @@ mod tests {
             base_url,
             email(),
             Secret::new(Faker.fake()),
-            std::time::Duration::from_secs(10),
+            std::time::Duration::from_millis(200),
         )
     }
 
